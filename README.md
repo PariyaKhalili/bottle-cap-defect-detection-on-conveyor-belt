@@ -51,29 +51,22 @@ Ideal for beverage manufacturing quality inspection lines.
 4. Run the cells
 
 ##  How It Works
-- **Stage 1**: Fine-Tuning (01_finetune_cap_model.ipynb)
+**Stage 1**: Fine-Tuning (01_finetune_cap_model.ipynb)
 
-    - Uses Roboflow-exported YOLOv8 dataset
-    - Trains a 5-class cap classifier:
-    - good, defect, loos-cap, no-cap, ring-missing
-    - Exports best.pt
+- Uses Roboflow-exported YOLOv8 dataset
+- Trains a 5-class cap classifier:
+- good, defect, loos-cap, no-cap, ring-missing
+- Exports best.pt
 
-Stage 2: Inference & Counting (02_bottle_detection_and_counting.ipynb)
+**Stage 2**: Inference & Counting (02_bottle_detection_and_counting.ipynb)
 
-Detect & track bottles using yolov8s.pt + ByteTrack
-Crop top 20% of each bottle → upscale 3×
-Run fine-tuned cap model
-Draw color-coded labels:
-Green: good
-Yellow: loos-cap
-Red: no-cap / defect
-Magenta: ring-missing
+- Detect & track bottles using yolov8s.pt + ByteTrack
+- Crop top 20% of each bottle → upscale 3×
+- Run fine-tuned cap model
+- Count when bottle crosses center line
+- Overlay total count + closed caps
+- Save annotated video
 
-Count when bottle crosses center line
-Overlay total count + closed caps
-Save annotated video
-
-Example Output
-Sample Frame
+This program could be extended to all types of bottle defects, such as checking whether a bottle is full or properly labeled.
 ![Example](https://github.com/PariyaKhalili/ask-question-from-a-pdf/blob/main/assets/app_ui.jpg)
 
