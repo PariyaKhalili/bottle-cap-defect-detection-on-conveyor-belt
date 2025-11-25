@@ -5,8 +5,6 @@ A complete end-to-end computer vision solution that detects bottles on a conveyo
 
 Ideal for beverage manufacturing quality inspection lines.
 
-![demo](samples/demo.gif) <!-- Replace with your actual output GIF -->
-
 ## Features
 - **Two-stage YOLOv8 pipeline**:  
   1. Bottle detection & tracking (`yolov8s.pt` + ByteTrack)  
@@ -31,7 +29,8 @@ Ideal for beverage manufacturing quality inspection lines.
     │   └── 02_bottle_detection_and_counting.ipynb # Full inference: tracking + cap classification + counting
     │
     ├── samples/                                  
-    │   ├── bottle1.mp4                           
+    │   ├── closed_cap_detection.jpg
+    │   ├── full_defect_detection_sample.jpg
     │
     ├── requirements-colab.txt                    # Colab-ready dependencies
     └── README.md
@@ -44,17 +43,17 @@ Ideal for beverage manufacturing quality inspection lines.
 
 ## Installation (Colab - Recommended)
 1. Place the video your Google Drive
-2. Open Colab:  
+2. Open Colab  
 3. Uplode the files
 4. Run the cells
 
 ##  How It Works
-Stage 1: Fine-Tuning (01_finetune_cap_model.ipynb)
+- **Stage 1**: Fine-Tuning (01_finetune_cap_model.ipynb)
 
-Uses Roboflow-exported YOLOv8 dataset
-Trains a 5-class cap classifier:
-good, defect, loos-cap, no-cap, ring-missing
-Exports best.pt
+    Uses Roboflow-exported YOLOv8 dataset
+    Trains a 5-class cap classifier:
+    good, defect, loos-cap, no-cap, ring-missing
+    Exports best.pt
 
 Stage 2: Inference & Counting (02_bottle_detection_and_counting.ipynb)
 
