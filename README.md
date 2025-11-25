@@ -3,6 +3,9 @@
 
 A complete end-to-end computer vision solution that detects bottles on a conveyor belt, tracks them using ByteTrack, classifies cap condition (good, loose, no-cap, defect, ring-missing), estimates bottle speed, and counts properly sealed bottles — all in real time.
 
+![Example](https://github.com/PariyaKhalili/ask-question-from-a-pdf/blob/main/assets/app_ui.jpg)
+
+
 Ideal for beverage manufacturing quality inspection lines.
 
 ## Features
@@ -50,10 +53,10 @@ Ideal for beverage manufacturing quality inspection lines.
 ##  How It Works
 - **Stage 1**: Fine-Tuning (01_finetune_cap_model.ipynb)
 
-    Uses Roboflow-exported YOLOv8 dataset
-    Trains a 5-class cap classifier:
-    good, defect, loos-cap, no-cap, ring-missing
-    Exports best.pt
+    - Uses Roboflow-exported YOLOv8 dataset
+    - Trains a 5-class cap classifier:
+    - good, defect, loos-cap, no-cap, ring-missing
+    - Exports best.pt
 
 Stage 2: Inference & Counting (02_bottle_detection_and_counting.ipynb)
 
@@ -72,3 +75,5 @@ Save annotated video
 
 Example Output
 Sample Frame
+![Example](https://github.com/PariyaKhalili/ask-question-from-a-pdf/blob/main/assets/app_ui.jpg)
+
