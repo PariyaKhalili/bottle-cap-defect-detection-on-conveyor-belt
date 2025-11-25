@@ -3,7 +3,7 @@
 
 A complete end-to-end computer vision solution that detects bottles on a conveyor belt, tracks them using ByteTrack, classifies cap condition (good, loose, no-cap, defect, ring-missing), estimates bottle speed, and counts properly sealed bottles — all in real time.
 
-![Example](https://github.com/PariyaKhalili/ask-question-from-a-pdf/blob/main/assets/app_ui.jpg)
+![Example](https://github.com/PariyaKhalili/bottle-cap-defect-detection-on-conveyor-belt/blob/main/samples/closed_cap_detection.jpg)
 
 
 Ideal for beverage manufacturing quality inspection lines.
@@ -27,13 +27,13 @@ Ideal for beverage manufacturing quality inspection lines.
 
 ## Project Structure
 
+    ├── samples/                                  
+    │   ├── closed_cap_detection.jpg
+    │   ├── full_defect_detection_sample.jpg
     ├── src/
     │   ├── 01_finetune_cap_model.ipynb          # Fine-tune cap classifier on custom dataset
     │   └── 02_bottle_detection_and_counting.ipynb # Full inference: tracking + cap classification + counting
     │
-    ├── samples/                                  
-    │   ├── closed_cap_detection.jpg
-    │   ├── full_defect_detection_sample.jpg
     │
     ├── requirements-colab.txt                    # Colab-ready dependencies
     └── README.md
@@ -68,5 +68,5 @@ Ideal for beverage manufacturing quality inspection lines.
 - Save annotated video
 
 This program could be extended to all types of bottle defects, such as checking whether a bottle is full or properly labeled.
-![Example](https://github.com/PariyaKhalili/ask-question-from-a-pdf/blob/main/assets/app_ui.jpg)
+![Example](https://github.com/PariyaKhalili/bottle-cap-defect-detection-on-conveyor-belt/blob/main/samples/full_defect_detection_sample.jpg)
 
