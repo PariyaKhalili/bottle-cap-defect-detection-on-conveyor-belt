@@ -67,6 +67,7 @@ Ideal for beverage manufacturing quality inspection lines.
 - Overlay total count + closed caps
 - Save annotated video
 
-This program could be extended to all types of bottle defects, such as checking whether a bottle is full or properly labeled.
+**This program could be extended to all types of bottle defects, such as checking whether a bottle is full or properly labeled.**
+
 ![Example](https://github.com/PariyaKhalili/bottle-cap-defect-detection-on-conveyor-belt/blob/main/samples/full_defect_detection_sample.jpg)
 
